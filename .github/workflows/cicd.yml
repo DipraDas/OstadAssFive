@@ -55,11 +55,3 @@ jobs:
           cat downloaded-test-results/test-results.txt || true
           echo "==== exit code ===="
           cat downloaded-test-results/test-exit-code.txt || true
-
-      - name: Setup Node 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-
-      - name: Deploy to self-hosted runner
-        run: bash scripts/deploy.sh
